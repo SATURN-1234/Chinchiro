@@ -608,6 +608,8 @@ footer{
     if(rolling) return;
     var bet = currentBet();
     if(bet > chips || bet <= 0){ return; }
+    betInput.value = bet;
+    betValueDisplay.textContent = fmt(bet);
     rolling = true;
     rollBtn.disabled = true;
     playerHandNameEl.textContent = '\u00A0';
